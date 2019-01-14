@@ -106,84 +106,361 @@ return [
     | layout. The 'can' is a filter on Laravel's built in Gate functionality.
     |
     */
+    // https://fontawesome.com/icons?from=io
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'Menu de Navegação',
         [
             'text' => 'Blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Pages',
+            'text'        => 'Home',
             'url'         => 'admin/pages',
-            'icon'        => 'file',
+            'icon'        => 'home',
             'label'       => 4,
             'label_color' => 'success',
-        ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
-        ],
-        [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
+        ],      
+
+                // Planejamento Semanal
                 [
-                    'text' => 'Level One',
-                    'url'  => '#',
+                    'text'    => 'Planejamento Semanal',
+                    'icon'    => 'clipboard',
+                    'submenu' => [
+                        [
+                            'text' => 'Adicionar tarefa',
+                            'url'  => 'admin/settings',
+                            'icon' => 'file',
+                        ],
+                        [
+                            'text' => 'Minhas Tarefas',
+                            'url'  => 'admin/settings',
+                            'icon' => 'file',
+                        ],
+                        [
+                            'text' => 'Hoje',
+                            'url'  => 'admin/settings',
+                            'icon' => 'file',
+                        ],
+                        [
+                            'text' => 'Tarefas do setor',
+                            'url'  => 'admin/settings',
+                            'icon' => 'file',
+                        ],                
+                    ],
                 ],
+                // Planejamento Semanal
+
+                // Gerenciamento de erros
                 [
-                    'text'    => 'Level One',
+                    'text'    => 'Gerência de erros',
+                    'icon'    => 'exclamation-triangle',
+                    'submenu' => [
+                        [
+                            'text' => 'Adicionar',
+                            'url'  => 'admin/settings',
+                            'icon' => 'file',
+                        ],
+                        [
+                            'text' => 'Listar',
+                            'url'  => 'admin/settings',
+                            'icon' => 'file',
+                        ],
+                
+                    ],
+                ],
+                // Gerenciamento de erros
+
+                // Produtividade Mensal
+                [
+                    'text'        => 'Produtividade Mensal',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'clipboard',
+                ],
+                // Produtividade Mensal
+
+                // Monitoramento de Projetos
+                [
+                    'text'        => 'Monitoramento de Projetos',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'check-square',
+                ],
+                // Monitoramento de Projetos
+                
+                 // Reuniões
+                 [
+                    'text'    => 'Reuniões',
+                    'icon'    => 'share',
+                    'submenu' => [
+
+                //Reunião semanal
+                [
+                    'text'    => 'Reunião semanal',
                     'url'     => '#',
                     'submenu' => [
                         [
-                            'text' => 'Level Two',
+                            'text' => 'Criar',
                             'url'  => '#',
                         ],
                         [
-                            'text'    => 'Level Two',
+                            'text'    => 'Listar',
                             'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
+                        ],
+                    ],
+                ], // Reunião semanal
+
+
+                //Reunião de Retrospectiva
+                [
+                    'text'    => 'Reunião de Retrospectiva',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Criar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text'    => 'Listar',
+                            'url'     => '#',
+                        ],
+                    ],
+                ], // Reunião de Retrospectiva
+
+                
+                    ],
+                ],
+                // Reuniões               
+
+                'Gestão',
+
+                        // Configurações da Conta
+                [
+                    'text'    => 'Configurações da Conta',
+                    'icon'    => 'address-card',
+                    'submenu' => [
+                        [
+                            'text' => 'Perfil',
+                            'url'  => 'admin/settings',
+                            'icon' => 'user',
+                        ],
+                        [
+                            'text' => 'Mudar a senha',
+                            'url'  => 'admin/settings',
+                            'icon' => 'lock',
+                        ],
+                
+                    ],
+                ], // Configurações da Conta
+
+                        // Ficha do colaborador
+                        [
+                            'text'        => 'Ficha do colaborador',
+                            'url'         => 'admin/pages',
+                            'icon'        => 'clipboard',
+                        ],
+                        // Ficha do colaborador  
+
+               // Manual de Padronização
+               [
+                'text'    => 'Manual de Padronização',
+                'icon'    => 'book',
+                'submenu' => [
+                    [
+                        'text' => 'Cinegrafia',
+                        'url'  => 'admin/settings',
+                        'icon' => 'file',
+                    ],
+                    [
+                        'text' => 'Sonoplastia',
+                        'url'  => 'admin/settings',
+                        'icon' => 'file',
+                    ],
+                    [
+                        'text' => 'Computação gráfica',
+                        'url'  => 'admin/settings',
+                        'icon' => 'file',
+                    ],
+                    [
+                        'text' => 'Edição',
+                        'url'  => 'admin/settings',
+                        'icon' => 'file',
+                    ],  
+                    [
+                        'text' => 'Controle de qualidade',
+                        'url'  => 'admin/settings',
+                        'icon' => 'file',
+                    ],                     
+                    [
+                        'text' => 'Autoração',
+                        'url'  => 'admin/settings',
+                        'icon' => 'file',
+                    ],                     
+                    [
+                        'text' => 'Backup',
+                        'url'  => 'admin/settings',
+                        'icon' => 'file',
+                    ],                      
+                    
+
+                ],
+            ], // Manual de Padronização
+
+
+        'Admin',
+        [
+            'text'        => 'Overview',
+            'url'         => 'admin/pages',
+            'icon'        => 'globe',
+            'label'       => 4,
+            'label_color' => 'success',
+        ], 
+
+        // Gerencia de Usuários
+        [
+            'text'    => 'Gerência de Usuários',
+            'icon'    => 'address-card',
+            'submenu' => [
+                //Gerenciar usuário
+                [
+                    'text'    => 'Gerenciar usuários',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Criar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text'    => 'Listar',
+                            'url'     => '#',
                         ],
                     ],
                 ],
+
+                //Gerenciar permissoes
                 [
-                    'text' => 'Level One',
-                    'url'  => '#',
+                    'text'        => 'Gerenciar permissoes',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'file',
+                    'label'       => 4,
+                    'label_color' => 'success',
                 ],
+                //Gerenciar permissoes
+
+                //Perfil de acesso (role)
+                [
+                    'text'        => 'Perfil de acesso',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'file',
+                    'label'       => 4,
+                    'label_color' => 'success',
+                ],
+                //Perfil de acesso (role)
+
+
             ],
         ],
-        'LABELS',
+        // Gerencia de Usuários
+
+        // Adminastração de Projetos
         [
-            'text'       => 'Important',
-            'icon_color' => 'red',
+            'text'    => 'Projetos',
+            'icon'    => 'cog',
+            'submenu' => [
+
+
+                //Cadastrar Projetos
+                [
+                    'text'    => 'Cadastrar',
+                    'url'     => '#',
+                    'submenu' => [
+                        //Cadastrar setores
+                        [
+                            'text'        => 'Setores',
+                            'url'         => 'admin/pages',
+                            'icon'        => 'file',
+                            'label'       => 4,
+                            'label_color' => 'success',
+                        ],
+                        //Cadastrar setores
+                        //Cadastrar tipo do projeto
+                        [
+                            'text'        => 'Tipo do projeto',
+                            'url'         => 'admin/pages',
+                            'icon'        => 'file',
+                            'label'       => 4,
+                            'label_color' => 'success',
+                        ],
+                        //Cadastrar tipo do projeto
+                        //Cadastrar área de projeto
+                        [
+                            'text'        => 'Área de projeto',
+                            'url'         => 'admin/pages',
+                            'icon'        => 'file',
+                            'label'       => 4,
+                            'label_color' => 'success',
+                        ],
+                        //Cadastrar área de projeto
+
+                    ],
+                ],
+                //Criar Projeto
+                [
+                    'text'        => 'Criar Projeto',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'file',
+
+                ],
+                //Criar Projeto
+                //Listar Projeto
+                [
+                    'text'        => 'Listar Projetos',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'file',
+                    'label'       => 4,
+                    'label_color' => 'success',
+                ],
+                //Listar Projeto
+
+
+            ],
         ],
+        // Adminastração de Projetos
+
+        // Relatórios
         [
-            'text'       => 'Warning',
-            'icon_color' => 'yellow',
+            'text'    => 'Relatórios',
+            'icon'    => 'signal',
+            'submenu' => [
+
+                //Listar 
+                [
+                    'text'        => 'Lista01',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'file',
+
+                ],
+                //Listar 
+                //Listar 
+                [
+                    'text'        => 'Lista02',
+                    'url'         => 'admin/pages',
+                    'icon'        => 'file',
+                    'label'       => 4,
+                    'label_color' => 'success',
+                ],
+                //Listar 
+
+
+            ],
         ],
-        [
-            'text'       => 'Information',
-            'icon_color' => 'aqua',
-        ],
+        // Relatórios
+
+
     ],
+
+
+
 
     /*
     |--------------------------------------------------------------------------
