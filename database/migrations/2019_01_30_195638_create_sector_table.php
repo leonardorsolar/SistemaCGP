@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTypeprojectsTable extends Migration
+class CreateSectorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateTypeprojectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_projects', function (Blueprint $table) {
+        Schema::create('sectors', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('description');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateTypeprojectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_projects');
+        Schema::dropIfExists('sectors');
     }
 }

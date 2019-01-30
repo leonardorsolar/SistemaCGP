@@ -20,7 +20,7 @@ class CreateTypeprojectUserTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('typeproject_id')->references('id')->on('typeprojects')->onDelete('cascade');
+            $table->foreign('typeproject_id')->references('id')->on('type_projects')->onDelete('cascade');
         });
     }
 

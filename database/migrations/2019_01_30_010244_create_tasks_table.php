@@ -16,7 +16,6 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('typeproject_id');
             $table->unsignedInteger('class_id');
             $table->text('body');
             $table->date('date_ini');
@@ -25,9 +24,7 @@ class CreateTasksTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('typeproject_id')->references('id')->on('typeprojects')->onDelete('cascade');
-            $table->foreign('areaproject_id')->references('id')->on('areaprojects')->onDelete('cascade');
-            $table->foreign('class_id')->references('id')->on('classs')->onDelete('cascade');
+            $table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade');
         });
     }
 

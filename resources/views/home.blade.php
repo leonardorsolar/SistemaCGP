@@ -3,7 +3,17 @@
 @section('title', 'SCGPCPT')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+
+<div class="content">
+    
+    <div class="list-group-item">
+
+        <h1>Dashboard</h1>
+        
+        @include('pages.home')
+        
+</div>
+
 @stop
 
 @section('content')
