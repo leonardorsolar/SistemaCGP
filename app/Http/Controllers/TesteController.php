@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Entities\Sector;
-use App\Entities\TypeProject;
 use App\Entities\AreaProject;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class TesteController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -26,20 +25,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $sectories = Sector::all();
-        $area_projects = AreaProject::all();
-        $type_projects = TypeProject::all();
-       return view('home', compact('sectories','type_projects','area_projects'));
+        //$sectories = Sector::all();
+       //return view('teste.index', compact('sectories'));
 
-       //$area_projects = AreaProject::all();
-       //return view('teste.index', compact('area_projects'));
+       $area_projects = AreaProject::all();
+       return view('teste.index', compact('area_projects'));
+
+        //$sectories = Sector::all();
+        //return view('teste', compact('sectories'));
 
         //$type_projects = TypeProject::all();
         //return view('home', compact('type_projects'));
 
-        //$area_projects = AreaProject::all();
-        //return view('home', compact('area_projects'));
-        
+
         //$areaprojects = AreaProject::all();
         //return view('teste', compact('areaprojects'));
     }

@@ -35,10 +35,15 @@
 
                                 <label for="exampleFormControlSelect1">Categoria de Projeto</label>
                                 <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                                    <option>Lançamentos</option>
-                                    <option>Veterinária</option>
-                                    <option>Professor Eventual</option>
-                                    <option>Outros</option>
+
+                                   type_projects
+                                   
+                                   @foreach($type_projects as $type)
+                                        <option>{{$type->name}}</option>
+                                    @endforeach
+                                        
+                                   
+
                                 </select>
                             </div>
 
@@ -47,10 +52,11 @@
 
                                 <label for="exampleFormControlSelect1">Área</label>
                                 <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                                    <option>Informática</option>
-                                    <option>Histologia</option>
-                                    <option>Volume 2</option>
-                                    <option>Outras</option>
+
+                                    @foreach($area_projects as $area)
+                                        <option>{{$area->name}}</option>
+                                    @endforeach
+
                                 </select>
                             </div>
 

@@ -15,14 +15,13 @@ class CreateAreaprojectsTable extends Migration
     {
         Schema::create('area_projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('type_project_id');
+            //$table->unsignedInteger('user_id');
+            //$table->unsignedInteger('type_project_id');
             $table->string('name');
-            $table->text('description');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('type_project_id')->references('id')->on('type_projects')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('type_project_id')->references('id')->on('type_projects')->onDelete('cascade');
         });
     }
 

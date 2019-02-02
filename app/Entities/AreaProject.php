@@ -4,7 +4,7 @@ namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sector extends Model
+class AreaProject extends Model
 {
     protected $guarded = [];
 }
