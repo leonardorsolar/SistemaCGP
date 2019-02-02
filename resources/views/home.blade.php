@@ -4,18 +4,21 @@
 
 @section('content_header')
 
-<div class="content">
-    
-    <div class="list-group-item">
 
-        <h1>Dashboard</h1>
-        
-        @include('pages.home')
-        
-</div>
+<h1>
+    <small>Gerenciamento de tarefas</small>
+  </h1>
+  <ol class="breadcrumb " >
+    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+    <li class="active">Here</li>
+  </ol>
 
+  
 @stop
 
 @section('content')
-    <p>You are logged in!</p>
+    
+@include('pages.home')
+    
 @stop
+

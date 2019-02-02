@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Entities\Sector;
+
 class SectorTableSeeder extends Seeder
 {
     /**

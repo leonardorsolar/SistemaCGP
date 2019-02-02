@@ -1,5 +1,5 @@
     <!-- Modal Adicionar tarefas-->
-    <div class="modal fade bd-example-modal-lg small lh-125" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    <div class="modal fade bd-example-modal-lg small lh-125" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -79,21 +79,20 @@
                             <!-- selecionar datas -->
                             <div class="form-group col-md-6">
 
-                                <label for="recipient-name" class="col-form-label">Previsão de início:</label>
-                                <input id="datepicker01" width="200" />
-                                <script>
-                                    $('#datepicker01').datepicker({
-                                        uiLibrary: 'bootstrap4'
-                                    });
-                                </script>
-
+                              <!-- Date -->
+              <div class="form-group">
+                    <label>Date:</label>
+    
+                    <div class="input-group date">
+                      <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                      <input type="text" class="form-control pull-right" id="datepicker">
+                    </div>
+                    <!-- /.input group -->
                             </div>
+                            
 
-                            <div class="form-group col-md-6">
-
-                                <button type="submit" class="btn btn-primary my-4 float-right ">Adicionar Tarefa</button>
-
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -108,4 +107,7 @@
     </div>
 
         <!-- Calendário boostrap 4 https://investmentnovel.com/how-to-use-bootstrap-datepicker-in-laravel/ -->
+        
+
+
         
