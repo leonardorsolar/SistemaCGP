@@ -36,7 +36,7 @@
                                 <label for="exampleFormControlSelect1">Categoria de Projeto</label>
                                 <select class="form-control form-control-sm" id="exampleFormControlSelect1">
 
-                                   type_projects
+                                   
                                    
                                    @foreach($type_projects as $type)
                                         <option>{{$type->name}}</option>
@@ -64,10 +64,14 @@
                             <div class="form-group col-md-3">
                                 <label for="exampleFormControlSelect1">Curso/Aula</label>
                                 <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                                    <option>Curso de Informática</option>
-                                    <option>Aula08:Tecido Conjuntivo</option>
-                                    <option>Empreender para Aprender</option>
-                                    <option>Vt Veterinária</option>
+                                    
+                                    @foreach($projects as $project)
+                                        <option>{{$project->name}}</option>
+                                    @endforeach
+                                        
+
+
+
                                 </select>
                             </div>
 
@@ -80,6 +84,21 @@
                             <input type="text" class="form-control form-control-sm" id="recipient-name">
 
                         </div>
+
+                        <div class="form-group ">
+                        <form action="{{$project->path() . '/tasks'}}" method="POST">
+                                @csrf
+                        <div class="input-group">
+                                
+                            <input type="text-dark" class="form-control" name="body"  placeholder="Adicionar uma nova tarefa">
+                            <span class="input-group-addon"><i class="fa fa-refresh"></i></span>
+                                              <!-- General tools such as edit or delete-->
+                                
+                        </div>
+                        </form>
+                    </div>
+
+
 
                         <div class="form-row">
                             <!-- selecionar datas -->

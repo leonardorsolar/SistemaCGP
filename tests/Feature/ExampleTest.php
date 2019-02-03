@@ -17,6 +17,12 @@ class ExampleTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
+
+        //$this->withoutExceptionHandling();
+        //$sectories = factory('App\Entities\Sector')->create();
+
+        //$this->get('/')->assertStatus(200);
+        //$this->get('/')->assertViewHas('Cinegrafia');
     }
 
   

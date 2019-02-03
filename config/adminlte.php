@@ -117,7 +117,7 @@ return [
         ],
         [
             'text'        => 'Home',
-            'url'         => 'admin/pages',
+            'url'         => 'home',
             'icon'        => 'home',
             'label'       => 4,
             'label_color' => 'success',
@@ -183,7 +183,7 @@ return [
                 // Monitoramento de Projetos
                 [
                     'text'        => 'Monitoramento de Projetos',
-                    'url'         => 'admin/pages',
+                    'url'         => 'projects',
                     'icon'        => 'check-square',
                 ],
                 // Monitoramento de Projetos
@@ -407,7 +407,7 @@ return [
                 //Criar Projeto
                 [
                     'text'        => 'Criar Projeto',
-                    'url'         => 'admin/pages',
+                    'url'         => 'projects/create',
                     'icon'        => 'file',
 
                 ],

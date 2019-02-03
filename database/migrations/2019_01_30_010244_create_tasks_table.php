@@ -15,16 +15,16 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('class_id');
+            //$table->unsignedInteger('user_id');
+            $table->unsignedInteger('project_id');
             $table->text('body');
-            $table->date('date_ini');
-            $table->boolean('completed')->default(false);
-            $table->text('description');
+           // $table->date('date_ini');
+            //$table->boolean('completed')->default(false);
+            //$table->text('description');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
         });
     }
 

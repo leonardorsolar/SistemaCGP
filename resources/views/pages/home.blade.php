@@ -103,7 +103,7 @@
 
               <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
               
-              <ul class="todo-list ">
+              <ul class="todo-list">
 
                 <!-- tarefa -->
                 <li>
@@ -135,35 +135,10 @@
                 <!-- FIM tarefa -->
 
 
-                <!-- tarefa -->
-                <li>
-                    <!-- drag handle -->
-                    <span class="handle ">
-                          <i class="fa fa-ellipsis-v"></i>
-                          <i class="fa fa-ellipsis-v"></i>
-                        </span>
-                    <!-- checkbox -->
-                    <input type="checkbox" class="flat-red" checked>
-                    <i class="fa fa-star"></i>
-                    <!-- todo text -->
-                    <span class="text-muted small lh-125 ">Segunda-feira 01/02</span>
-                    
-                    <span class="text-muted small lh-125">Aula08 Vasectomia</span>
-                    <span class="text-muted small lh-125"> Cirurgia de Grandes animais</span>
-                    <small class="label label-danger"></i> em análise</small>
-                    <div class="tools">
-                        <i class="fa fa-edit"></i>
-                        <i class="fa fa-trash-o"></i>
-                      </div>
-                      <span></span>
-                    <div class="input-group">
-                        <input type="text-dark" class="form-control">
-                        <span class="input-group-addon"><i class="fa fa-refresh"></i></span>
-                                          <!-- General tools such as edit or delete-->
-                      </div>
-                  </li>
-                  <!-- FIM tarefa -->
 
+
+                  
+                  
 
               </ul>
             </div>

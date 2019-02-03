@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Entities\Sector;
 use App\Entities\TypeProject;
 use App\Entities\AreaProject;
+use App\Entities\Classe;
+use App\Project;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,18 +31,38 @@ class HomeController extends Controller
         $sectories = Sector::all();
         $area_projects = AreaProject::all();
         $type_projects = TypeProject::all();
-       return view('home', compact('sectories','type_projects','area_projects'));
+        $projects = Project::all();
+       return view('home', compact('sectories','type_projects','area_projects','projects'));
 
-       //$area_projects = AreaProject::all();
-       //return view('teste.index', compact('area_projects'));
-
-        //$type_projects = TypeProject::all();
-        //return view('home', compact('type_projects'));
-
-        //$area_projects = AreaProject::all();
-        //return view('home', compact('area_projects'));
-        
-        //$areaprojects = AreaProject::all();
-        //return view('teste', compact('areaprojects'));
+       
     }
+
+
+    public function store()
+    {
+        // insert no banco persist
+    Project::create(request(['title','description']));
+    // redirect
+    return redirect ('projects');  
+    }
+
+    public function show(Classe $project)
+    {
+
+        $class = Classe::all();
+    //an_authenticated_cannot_view_the_projects_of_others()
+    //if (auth()->id() != $project->owner_id) {
+        //if (auth()->user()->isNot($project->owner)) {   
+        //abort(403); }
+       // $this->authorize('update', $project);
+    
+    
+    return view('projects.show', compact('class'));
+
+    }
+
+
+
+
+
 }

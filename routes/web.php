@@ -17,10 +17,27 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//home
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/pages', function () {
-    return view('pages.home');
+
+// lista os projetos
+Route::get('/projects', 'ProjectsController@index');
+Route::get('/projects/create', 'ProjectsController@create');
+// detalha um projeto id
+Route::get('/projects/{project}', 'ProjectsController@show');
+// nada
+//Route::get('/projects/{project}/edit', 'ProjectsController@edit');
+Route::post('/projects', 'ProjectsController@store');
+
+// enviando a escrita da tarefa para o banco
+Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
+
+
+
+
+Route::get('/pag', function () {
+    return view('projects.create');
 });
 
 
