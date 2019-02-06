@@ -21,6 +21,10 @@ class Project extends Model
      */
     public function tasks()
     {
+        // projeto vai procurar na tabela tarefas o campo projeto_id
+        // quero chegar em todas as tarefas que pertence a esse projeto
+        // está em projetos e quer chegar a varias tarefas 
+        //hasMany usa-se no lado 1 (projetos)
         return $this->hasMany(Task::class);
     }
 

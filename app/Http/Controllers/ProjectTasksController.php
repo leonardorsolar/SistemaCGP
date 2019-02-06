@@ -21,4 +21,18 @@ class ProjectTasksController extends Controller
 
         return redirect($project->path());
     }
+
+    public function update(Project $project, Task $task)
+    {
+
+        $task->update([
+            'body' => request('body'),
+            'completed' => request()->has('completed'),
+
+        ]);
+
+        return redirect($project->path());
+    }
+
+
 }

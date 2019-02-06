@@ -18,6 +18,6 @@ class TypeProjectTableSeeder extends Seeder
         factory(TypeProject::class)->create(['name'=>'Veterinária']);
         factory(TypeProject::class)->create(['name'=>'Professor Eventual']);
         factory(TypeProject::class)->create(['name'=>'Disciplina']);
-        factory(TypeProject::class)->create(['name'=>'Projeto Eventuais']);
+        factory(TypeProject::class)->create(['name'=>'Projetos Eventuais']);
     }
 }

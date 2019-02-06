@@ -18,5 +18,6 @@ class SectorTableSeeder extends Seeder
         factory(Sector::class)->create(['name'=>'Edição']);
         factory(Sector::class)->create(['name'=>'Controle de Qualidade']);
         factory(Sector::class)->create(['name'=>'Autoração']);
+        factory(Sector::class)->create(['name'=>'Entrega']);
     }
 }

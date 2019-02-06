@@ -130,7 +130,7 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Adicionar tarefa',
-                            'url'  => 'admin/settings',
+                            'url'  => 'includes/modal',
                             'icon' => 'file',
                         ],
                         [
@@ -230,7 +230,72 @@ return [
                 
                     ],
                 ],
-                // Reuniões               
+                // Reuniões 
+                
+                        // Adminastração de Projetos
+        [
+            'text'    => 'Projetos',
+            'icon'    => 'cog',
+            'submenu' => [
+
+
+                //Cadastrar Projetos
+                [
+                    'text'    => 'Cadastrar',
+                    'url'     => '#',
+                    'submenu' => [
+                        //Cadastrar setores
+                        [
+                            'text'        => 'Setores',
+                            'url'         => 'projects/create/sector',
+                            'icon'        => 'file',
+                            'label'       => 4,
+                            'label_color' => 'success',
+                        ],
+                        //Cadastrar setores
+                        //Cadastrar tipo do projeto
+                        [
+                            'text'        => 'Tipo do projeto',
+                            'url'         => '/projects/create/typeprojects',
+                            'icon'        => 'file',
+                            'label'       => 4,
+                            'label_color' => 'success',
+                        ],
+                        //Cadastrar tipo do projeto
+                        //Cadastrar área de projeto
+                        [
+                            'text'        => 'Área de projeto',
+                            'url'         => '/projects/create/areaprojects',
+                            'icon'        => 'file',
+                            'label'       => 4,
+                            'label_color' => 'success',
+                        ],
+                        //Cadastrar área de projeto
+
+                    ],
+                ],
+                //Criar Projeto
+                [
+                    'text'        => 'Criar Aula/Curso',
+                    'url'         => 'projects/create',
+                    'icon'        => 'file',
+
+                ],
+                //Criar Projeto
+                //Listar Projeto
+                [
+                    'text'        => 'Listar Projetos',
+                    'url'         => 'projects',
+                    'icon'        => 'file',
+                    'label'       => 4,
+                    'label_color' => 'success',
+                ],
+                //Listar Projeto
+
+
+            ],
+        ],
+        // Adminastração de Projetos
 
                 'Gestão',
 

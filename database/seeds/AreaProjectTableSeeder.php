@@ -13,9 +13,9 @@ class AreaProjectTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(AreaProject::class)->create(['name'=>'Informatica']);
+        factory(AreaProject::class)->create(['name'=>'Administração']);
         factory(AreaProject::class)->create(['name'=>'Anatomia Veterinária']);
-        factory(AreaProject::class)->create(['name'=>'Volume 2']);
-        factory(AreaProject::class)->create(['name'=>'Caes e Gatos']);
+        factory(AreaProject::class)->create(['name'=>'Volume 1']);
+        
     }
 }

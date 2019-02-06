@@ -24,11 +24,20 @@
         <i class="fa fa-trash-o"></i>
       </div>
       <span></span>
+      <form method="POST" action="{{$project->path() . '/tasks/'. $task->id}}" >
+        @method('PATCH')
+        @csrf
+
+
     <div class="input-group">
-        <input type="text-dark" class="form-control" name="body" value="{{ $task->body }}">
-        <span class="input-group-addon"><i class="fa fa-refresh"></i></span>
+          
+        <input type="text-dark" class="form-control " name="body" value="{{ $task->body }}">
+        
+        <span class="input-group-addon"><input type="checkbox" name="completed" onchange="this.form.submit()"  ></span>
                           <!-- General tools such as edit or delete-->
       </div>
+
+    </form>
   </li>
   <!-- FIM tarefa -->   
    @endforeach
@@ -42,6 +51,7 @@
             </span>
         <!-- checkbox -->
         <input type="checkbox" value="">
+        
         <i class="fa fa-star"></i>
         <!-- todo text -->
         <span class="text-muted small lh-125 ">Segunda-feira 01/02</span>
@@ -57,7 +67,7 @@
           <form action="{{$project->path() . '/tasks'}}" method="POST">
                 @csrf
         <div class="input-group">
-                
+              
             <input type="text-dark" class="form-control" name="body"  placeholder="Adicionar uma nova tarefa">
             <span class="input-group-addon"><i class="fa fa-refresh"></i></span>
                               <!-- General tools such as edit or delete-->

@@ -14,8 +14,8 @@ class TaskTableSeeder extends Seeder
     public function run()
     {
         
-        factory(Task::class)->create(['project_id'=>'1','body'=>'fazer a aula 01']);
-        factory(Task::class)->create(['project_id'=>'2','body'=>'fazer a aula 02']);
+        factory(Task::class)->create(['project_id'=>'1','body'=>'Fazer a minha primeira tarefa']);
+        factory(Task::class)->create(['project_id'=>'2','body'=>'Fazer a minha segunda tarefa']);
      
     }
 }

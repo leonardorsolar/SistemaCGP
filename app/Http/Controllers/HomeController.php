@@ -7,6 +7,7 @@ use App\Entities\TypeProject;
 use App\Entities\AreaProject;
 use App\Entities\Classe;
 use App\Project;
+use App\Task;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,7 +33,8 @@ class HomeController extends Controller
         $area_projects = AreaProject::all();
         $type_projects = TypeProject::all();
         $projects = Project::all();
-       return view('home', compact('sectories','type_projects','area_projects','projects'));
+        $tasks = Task::all();
+       return view('home', compact('sectories','type_projects','area_projects','projects','tasks'));
 
        
     }

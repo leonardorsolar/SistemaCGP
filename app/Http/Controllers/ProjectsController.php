@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Project;
+use App\Task;
 
 class ProjectsController extends Controller
 {
@@ -52,6 +53,23 @@ class ProjectsController extends Controller
     //return redirect ('projects'); 
     return redirect($project->path()); 
         
+    }
+
+    public function status(Project $project)
+    {
+        //select sum(valor) from task group by cliente;
+
+        $tarefas = Task::all();
+        $total_tarefas = $tarefas->sum('id');
+
+        //public function tasks() do model Project.php
+        // hasMany relacao de 1 para muitos 
+        $total= $project->tasks;
+        
+
+        return view ('projects.status', compact('project','tarefas','total'));
+        //return redirect($project->path()); 
+
     }
 
 }

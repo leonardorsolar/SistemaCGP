@@ -12,8 +12,10 @@ class ProjectTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Project::class)->create(['name'=>'Aula 01']);
-        factory(Project::class)->create(['name'=>'Curso 02']);
+        factory(Project::class)->create(['name'=>'Aula 01 Sistema Nervoso dos Animais']);
+        factory(Project::class)->create(['name'=>'Curso de Gerenciamento de Projetos']);
+        factory(Project::class)->create(['name'=>'Aula de Empreendendedorismo']);
+        factory(Project::class)->create(['name'=>'VT da Veterinária']);
         
     }
 }

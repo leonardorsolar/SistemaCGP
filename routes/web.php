@@ -26,15 +26,28 @@ Route::get('/projects', 'ProjectsController@index');
 Route::get('/projects/create', 'ProjectsController@create');
 // detalha um projeto id
 Route::get('/projects/{project}', 'ProjectsController@show');
+Route::get('/projects/{project}/status', 'ProjectsController@status');
 // nada
 //Route::get('/projects/{project}/edit', 'ProjectsController@edit');
 Route::post('/projects', 'ProjectsController@store');
 
 // enviando a escrita da tarefa para o banco
 Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
+// update tarefa
+Route::patch('/projects/{project}/tasks/{task}', 'ProjectTasksController@update');
+
+// criando setores 
+Route::get('/projects/create/sector', 'SectorsController@create');
+Route::post('/projects/create/sector', 'SectorsController@store');
+
+// create tipo de projeto : rota  - TypeProjectsController - create - createtypeproject.blade
+Route::get('/projects/create/typeprojects', 'TypeProjectsController@create');
+// salvando (store) : rota - TypeProjects - TypeProjectsController - store
+Route::post('/projects/create/typeprojects', 'TypeProjectsController@store');
 
 
-
+Route::get('/projects/create/areaprojects', 'AreaProjectsController@create');
+Route::post('/projects/create/areaprojects', 'AreaProjectsController@store');
 
 Route::get('/pag', function () {
     return view('projects.create');
