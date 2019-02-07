@@ -135,6 +135,15 @@
                                             </div>
                                 </div>
                                 <div class="col-md-3">
+                                        <label for="projeto">Status</label>
+                                        <select name="projeto" class="form-control form-control-sm" id="projeto">
+                                                <option value="">Progresso</option>
+                                                <option value="">Parado</option>
+                                                <option value="">Análise</option>
+                                                <option value="">Finalizado</option>
+                                        </select>
+
+
                                 </div>
                 
                                  <div class="col-md-3">

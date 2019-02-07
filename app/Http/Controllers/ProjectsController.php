@@ -37,6 +37,33 @@ class ProjectsController extends Controller
     }
 
 
+    public function edit(Project $project)
+    {
+    
+    return view ('projects.edit', compact('project'));
+    }
+
+    /**
+     * Update the project.
+     *
+     * @param  Project $project
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
+    public function update(Project $project)
+    {
+        //$this->authorize('update', $project);
+
+        //$project->update($this->validateRequest());
+
+        $attributes = request()->validate(['name' => 'required']);
+
+        $project->update($attributes);
+
+        return redirect($project->path());
+    }
+
+
     //store() – Para salvar a categoria (inserir no banco de dados)
     public function store()
     {

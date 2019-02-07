@@ -127,9 +127,10 @@
                     <div class="box box-danger">
 
                         <div class="box-header with-border">
-                          <i class="fa fa-edit"></i>
-                          <h3 class="box-title">Minhas Metas</h3>
-            
+                          <i class="fa fa-user"></i>
+                          <h3 class="box-title">OKR</h3>
+
+
                           <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                             </button>
@@ -137,30 +138,41 @@
                               <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-wrench"></i></button>
                               <ul class="dropdown-menu" role="menu">
+                                  <li><a href="okr">Visualizar</a></li>
                                 <li><a href="#">Editar</a></li>
                               </ul>
                             </div>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            
                           </div>
+
+
+
+
                         </div>
             
                         <!-- /.box-header metas -->
                         <div class="box-body">
-                          <div class="row">
-                             
-                              <div class="box-body">
-            
-                         <div class="input-group">
-                            <input type="text" class="form-control">
-                            <span class="input-group-addon"><i class="fa fa-refresh"></i></span>
-                          </div>
-                          <br>
-                          
-                          </div>
-                              <!-- /.progress-group -->
+                          <!-- /.progress-group -->
+                          <div class="progress-group">
+                            <span class="progress-text">KR1</span>
+                            <span class="progress-number"><b>5</b>/20</span>
+        
+                            <div class="progress sm">
+                              <div class="progress-bar progress-bar-aqua" style="width: 25%"></div>
                             </div>
-                            <!-- /.col -->
                           </div>
+                          <!-- /.progress-group -->
+                          <div class="progress-group">
+                            <span class="progress-text">KR1</span>
+                            <span class="progress-number"><b>20</b>/40</span>
+        
+                            <div class="progress sm">
+                              <div class="progress-bar progress-bar-aqua" style="width: 50%"></div>
+                            </div>
+                          </div>
+
+
+                       </div>
                           <!-- /.box-body -->
             
             

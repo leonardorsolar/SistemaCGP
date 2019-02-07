@@ -27,8 +27,10 @@ Route::get('/projects/create', 'ProjectsController@create');
 // detalha um projeto id
 Route::get('/projects/{project}', 'ProjectsController@show');
 Route::get('/projects/{project}/status', 'ProjectsController@status');
-// nada
-//Route::get('/projects/{project}/edit', 'ProjectsController@edit');
+// editar
+Route::get('/projects/{project}/edit', 'ProjectsController@edit');
+// update
+Route::patch('/projects/{project}', 'ProjectsController@update');
 Route::post('/projects', 'ProjectsController@store');
 
 // enviando a escrita da tarefa para o banco
@@ -48,6 +50,13 @@ Route::post('/projects/create/typeprojects', 'TypeProjectsController@store');
 
 Route::get('/projects/create/areaprojects', 'AreaProjectsController@create');
 Route::post('/projects/create/areaprojects', 'AreaProjectsController@store');
+
+
+
+Route::get('/okr', function () {
+    return view('projects.okr');
+});
+
 
 Route::get('/pag', function () {
     return view('projects.create');
