@@ -51,6 +51,11 @@ Route::post('/projects/create/typeprojects', 'TypeProjectsController@store');
 Route::get('/typeprojects/{typeprojects}/areas', function($typeProject_id) {
     return  App\Entities\AreaProject::where('type_project_id','=',$typeProject_id)->get();
 });
+// selecionando os projetos da area projeto com id x
+// a rota é area de projeto com id x que vai recuperar os projetos
+Route::get('/areaprojects/{areaprojects}/projects', function($areaProject_id) {
+    return  App\Project::where('area_projects_id','=',$areaProject_id)->get();
+});
 
 
 Route::get('/projects/create/areaprojects', 'AreaProjectsController@create');

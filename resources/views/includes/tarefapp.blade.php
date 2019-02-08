@@ -45,3 +45,8 @@
             </li>
             <!-- FIM tarefa -->
 @endforeach
+
+<script src="js/dashboard.js"></script>
+
+
+

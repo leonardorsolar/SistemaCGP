@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Entities\AreaProject;
+use App\Entities\TypeProject;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Task;
@@ -24,8 +26,8 @@ class ProjectsController extends Controller
 
     public function create()
     {
-
-        return view('projects.create');
+        $type_projects = TypeProject::all();
+        return view('projects.create', compact('type_projects'));
 
     }
 
@@ -73,12 +75,22 @@ class ProjectsController extends Controller
 
     // função (método) validate  função validate() passando o array com todos os campos que eu vou validar. 
         //Se o atributo required (requerido) estiver presente, o campo deve conter um valor quando o formulário for enviado.
-        $attributes = request()->validate(['name' => 'required']);
 
-        $project= Project::create($attributes);
+        try{
+            $attributes = request()->validate([
+                'name' => 'required',
+                'description' => 'required',
+                'area_projects_id'=> 'required'
+            ]);
+            $project = Project::create($attributes);
+            return redirect($project->path());
+        }catch (\Exception $e){
+            dd($e);
+        }
+
     // redirect
     //return redirect ('projects'); 
-    return redirect($project->path()); 
+
         
     }
 

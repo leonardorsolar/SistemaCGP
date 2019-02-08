@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $guarded = [];
+    protected $fillable = ['name','decription','area_projects_id'];
+//    protected $guarded = [];
 
 
     public function path()
@@ -38,7 +39,5 @@ class Project extends Model
     {
         return $this->tasks()->create(compact('body'));
     }
-
-
 
 }

@@ -1,3 +1,6 @@
+@foreach($projects as $project)
+<option value="{{$project->id}}">{{$project->name}}</option>
+ @endforeach
 
 
     <!-- Modal Adicionar tarefas-->
@@ -38,12 +41,12 @@
                                 <select id="typeProject" name="typeProject" class="form-control form-control-sm">
 
                                     <option value="">Selecione uma opção</option>
-                            
-                                   @foreach($type_projects as $type)
+
+                                    @foreach($type_projects as $type)
                                         <option value="{{$type->id}}">{{$type->name}}</option>
                                     @endforeach
-                                        
-                                   
+
+
 
                                 </select>
                             </div>
@@ -52,7 +55,7 @@
                             <div class="form-group col-md-3">
 
                                 <label for="exampleFormControlSelect1">Área</label>
-                                <select name="area"  class="form-control form-control-sm" id="area">
+                                <select name="area" id="area" class="form-control form-control-sm" >
                                     <option value="">Selecione uma opção</option>
                                 </select>
                             </div>
@@ -60,11 +63,9 @@
                             <!-- selecionar curso/aula-->
                             <div class="form-group col-md-3">
                                 <label for="projeto">Curso/Aula</label>
-                                <select name="projeto" class="form-control form-control-sm" id="projeto">
+                                <select name="projeto" id="projeto" class="form-control form-control-sm" >
                                     <option value="">Selecione uma opção</option>
-                                    @foreach($projects as $project)
-                                        <option value="{{$project->id}}">{{$project->name}}</option>
-                                    @endforeach
+                                    
                                 </select>
 
                                 
@@ -184,8 +185,28 @@
           }
       });
     });
-    
-     </script>
+
+    $('#area').on('change', function(e){
+
+        console.log(`teste`);
+       document.getElementById("projeto").innerHTML = "";
+       $('#projeto').append(new Option("Selecione uma opçao", "a"));
+
+       var areaProject_id = e.target.value;
+       $.ajax({
+       'processing': true,
+       'serverSide': false,
+         type: "GET",
+         url: "/areaprojects/"+areaProject_id+"/projects",
+         success: function(s) {
+           $.each(s, function(index,projeto){
+               var option = new Option(projeto.name,projeto.id);
+               $('#projeto').append(option);
+           });
+         }
+     });
+   });
+    </script>
 @stop
         <!-- Calendário boostrap 4 https://investmentnovel.com/how-to-use-bootstrap-datepicker-in-laravel/ -->
         
