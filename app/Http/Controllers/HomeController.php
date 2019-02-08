@@ -30,11 +30,10 @@ class HomeController extends Controller
     public function index()
     {
         $sectories = Sector::all();
-        $area_projects = AreaProject::all();
         $type_projects = TypeProject::all();
         $projects = Project::all();
         $tasks = Task::all();
-       return view('home', compact('sectories','type_projects','area_projects','projects','tasks'));
+       return view('home', compact('sectories','type_projects','projects','tasks'));
 
        
     }

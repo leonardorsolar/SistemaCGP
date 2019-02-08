@@ -46,6 +46,11 @@ Route::post('/projects/create/sector', 'SectorsController@store');
 Route::get('/projects/create/typeprojects', 'TypeProjectsController@create');
 // salvando (store) : rota - TypeProjects - TypeProjectsController - store
 Route::post('/projects/create/typeprojects', 'TypeProjectsController@store');
+// selecionando as áreas do tipo de projeto com id x
+// a rota é tipo de projeto com id x que vai recuperar as áreas
+Route::get('/typeprojects/{typeprojects}/areas', function($typeProject_id) {
+    return  App\Entities\AreaProject::where('type_project_id','=',$typeProject_id)->get();
+});
 
 
 Route::get('/projects/create/areaprojects', 'AreaProjectsController@create');

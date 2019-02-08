@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Entities\AreaProject;
+use App\Entities\TypeProject;
+
 
 
 class AreaProjectTableSeeder extends Seeder
@@ -13,9 +15,17 @@ class AreaProjectTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(AreaProject::class)->create(['name'=>'Administração']);
-        factory(AreaProject::class)->create(['name'=>'Anatomia Veterinária']);
-        factory(AreaProject::class)->create(['name'=>'Volume 1']);
+        $um  = factory(TypeProject::class)->create(['name'=>'Lançamentos']);
+        factory(AreaProject::class)->create(['name'=>'Administração', 'type_project_id'=> $um]);
+        factory(AreaProject::class)->create(['name'=>'Teste', 'type_project_id'=>$um]);
         
+        factory(AreaProject::class)->create([
+            'name'=>'Anatomia Veterinária',
+            'type_project_id'=>factory(TypeProject::class)->create(['name'=>'Veterinária'])
+            ]);
+        factory(AreaProject::class)->create([
+            'name'=>'Volume 1',
+            'type_project_id' => factory(TypeProject::class)->create(['name'=>'Professor Eventual'])
+            ]);
     }
 }

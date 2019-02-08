@@ -35,12 +35,12 @@
                             <div class="form-group col-md-3">
 
                                 <label for="exampleFormControlSelect1">Categoria de Projeto</label>
-                                <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                                <select id="typeProject" name="typeProject" class="form-control form-control-sm">
 
-                                   
-                                   
+                                    <option value="">Selecione uma opção</option>
+                            
                                    @foreach($type_projects as $type)
-                                        <option>{{$type->name}}</option>
+                                        <option value="{{$type->id}}">{{$type->name}}</option>
                                     @endforeach
                                         
                                    
@@ -52,12 +52,8 @@
                             <div class="form-group col-md-3">
 
                                 <label for="exampleFormControlSelect1">Área</label>
-                                <select name="area"  class="form-control form-control-sm" id="area_id">
-
-                                    @foreach($area_projects as $area)
-                                        <option>{{$area->name}}</option>
-                                    @endforeach
-
+                                <select name="area"  class="form-control form-control-sm" id="area">
+                                    <option value="">Selecione uma opção</option>
                                 </select>
                             </div>
 
@@ -65,9 +61,9 @@
                             <div class="form-group col-md-3">
                                 <label for="projeto">Curso/Aula</label>
                                 <select name="projeto" class="form-control form-control-sm" id="projeto">
-                                    
+                                    <option value="">Selecione uma opção</option>
                                     @foreach($projects as $project)
-                                        <option value="">{{$project->name}}</option>
+                                        <option value="{{$project->id}}">{{$project->name}}</option>
                                     @endforeach
                                 </select>
 
@@ -167,9 +163,32 @@
         </div>
     </div>
 </div>
+@section('js')
+    <script> 
+     $('#typeProject').on('change', function(e){
 
+        document.getElementById("area").innerHTML = "";
+        $('#area').append(new Option("Selecione uma opçao", "a"));
+
+        var typeProject_id = e.target.value;
+        $.ajax({
+        'processing': true, 
+        'serverSide': false,
+          type: "GET",
+          url: "/typeprojects/"+typeProject_id+"/areas",
+          success: function(s) {
+            $.each(s, function(index,area){
+                var option = new Option(area.name,area.id);
+                $('#area').append(option);
+            });
+          }
+      });
+    });
+    
+     </script>
+@stop
         <!-- Calendário boostrap 4 https://investmentnovel.com/how-to-use-bootstrap-datepicker-in-laravel/ -->
         
 
 
-        
+    

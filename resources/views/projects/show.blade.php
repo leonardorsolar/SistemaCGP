@@ -10,7 +10,7 @@
 <h3 class="">{{ $project->name }}</h3>
 </div>
 <div class="col-sm-6 pull-rigth">
-        <button type="button" onclick="window.location.href='{{ $project->path() . '/edit' }}'" class="btn btn-success pull-right" ><i class="fa fa-edit"></i> Editar
+        <button type="button" onclick="window.location.href='{{ $project->path() . '/edit' }}'" class="btn btn-success pull-right" ><i class="fa fa-edit"></i> Editar Projeto
         </button>
       <!-- /.col -->
     </div>

@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'collapse_sidebar' => false,
+    'collapse_sidebar' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -129,13 +129,8 @@ return [
                     'icon'    => 'clipboard',
                     'submenu' => [
                         [
-                            'text' => 'Adicionar tarefa',
-                            'url'  => 'includes/modal',
-                            'icon' => 'file',
-                        ],
-                        [
                             'text' => 'Minhas Tarefas',
-                            'url'  => 'admin/settings',
+                            'url'  => 'home',
                             'icon' => 'file',
                         ],
                         [
@@ -172,17 +167,11 @@ return [
                 ],
                 // Gerenciamento de erros
 
-                // Produtividade Mensal
-                [
-                    'text'        => 'Produtividade Mensal',
-                    'url'         => 'admin/pages',
-                    'icon'        => 'clipboard',
-                ],
-                // Produtividade Mensal
+                
 
                 // Monitoramento de Projetos
                 [
-                    'text'        => 'Monitoramento de Projetos',
+                    'text'        => 'Monitoramento',
                     'url'         => 'projects',
                     'icon'        => 'check-square',
                 ],
@@ -196,7 +185,7 @@ return [
 
                 //Reunião semanal
                 [
-                    'text'    => 'Reunião semanal',
+                    'text'    => 'Semanal',
                     'url'     => '#',
                     'submenu' => [
                         [
@@ -213,7 +202,7 @@ return [
 
                 //Reunião de Retrospectiva
                 [
-                    'text'    => 'Reunião de Retrospectiva',
+                    'text'    => 'Retrospectiva',
                     'url'     => '#',
                     'submenu' => [
                         [
@@ -294,14 +283,23 @@ return [
 
 
             ],
+
+            
         ],
+        // Produtividade Mensal
+        [
+            'text'        => 'Produtividade Mensal',
+            'url'         => 'admin/pages',
+            'icon'        => 'clipboard',
+        ],
+        // Produtividade Mensal
         // Adminastração de Projetos
 
                 'Gestão',
 
                         // Configurações da Conta
                 [
-                    'text'    => 'Configurações da Conta',
+                    'text'    => 'Conta',
                     'icon'    => 'address-card',
                     'submenu' => [
                         [
@@ -320,7 +318,7 @@ return [
 
                         // Ficha do colaborador
                         [
-                            'text'        => 'Ficha do colaborador',
+                            'text'        => 'Ficha',
                             'url'         => 'admin/pages',
                             'icon'        => 'clipboard',
                         ],
@@ -328,7 +326,7 @@ return [
 
                // Manual de Padronização
                [
-                'text'    => 'Manual de Padronização',
+                'text'    => 'Manual',
                 'icon'    => 'book',
                 'submenu' => [
                     [
