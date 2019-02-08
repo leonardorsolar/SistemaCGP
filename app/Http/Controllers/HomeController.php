@@ -32,10 +32,8 @@ class HomeController extends Controller
         $sectories = Sector::all();
         $type_projects = TypeProject::all();
         $projects = Project::all();
-        $tasks = Task::all();
+        $tasks = Task::with('user')->get();
        return view('home', compact('sectories','type_projects','projects','tasks'));
-
-       
     }
 
 
@@ -56,14 +54,7 @@ class HomeController extends Controller
         //if (auth()->user()->isNot($project->owner)) {   
         //abort(403); }
        // $this->authorize('update', $project);
-    
-    
+
     return view('projects.show', compact('class'));
-
     }
-
-
-
-
-
 }

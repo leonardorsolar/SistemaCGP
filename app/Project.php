@@ -35,9 +35,9 @@ class Project extends Model
      * @param  string $body
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function addTask($body)
+    public function addTask($request)
     {
-        return $this->tasks()->create(compact('body'));
+        return $this->tasks()->create($request);
     }
 
 }

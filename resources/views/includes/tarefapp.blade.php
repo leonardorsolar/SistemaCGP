@@ -31,7 +31,7 @@
 
               <div class="pull-right ">
                   <span class=" label bg-blue">Cin</span>
-              <span class="text-muted small lh-125">{{auth()->user()->name}}</span> &nbsp;
+              <span class="text-muted small lh-125">{{$task->user->name}}</span> &nbsp;
                       <i class="fa fa-edit"></i>
                       <i class="fa fa-trash-o"></i>
                 </div>
