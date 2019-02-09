@@ -17,6 +17,19 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::group(['middleware'], function(){
+    //Route::get('/admin', 'AdminController@index');
+
+    Route::get('/users', 'UserController@index');
+    //Route::get('/user/add', 'UserController@getAdd');
+    //Route::post('/user/add', 'UserController@postAdd');
+    //Route::get('/user/edit/{id}', 'UserController@getEdit');
+    //Route::post('/user/edit/{id}', 'UserController@postEdit');
+    //Route::get('/user/delete/{id}', 'UserController@delete');
+});
+
+
+
 //home
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -68,8 +81,8 @@ Route::get('/okr', function () {
 });
 
 
-Route::get('/pag', function () {
-    return view('projects.create');
+Route::get('/tes', function () {
+    return view('teste.index');
 });
 
 

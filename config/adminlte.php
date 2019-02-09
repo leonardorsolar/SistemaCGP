@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'collapse_sidebar' => true,
+    'collapse_sidebar' => False,
 
     /*
     |--------------------------------------------------------------------------
@@ -315,6 +315,14 @@ return [
                 
                     ],
                 ], // Configurações da Conta
+
+                  // listar colaborador
+                  [
+                    'text'        => 'Usuários cadastrados ',
+                    'url'         => 'users',
+                    'icon'        => 'clipboard',
+                ],
+                // listar colaborador  
 
                         // Ficha do colaborador
                         [

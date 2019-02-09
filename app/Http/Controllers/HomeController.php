@@ -33,9 +33,10 @@ class HomeController extends Controller
         $type_projects = TypeProject::all();
         $projects = Project::all();
         $tasks = Task::with('user')->get();
+        //usuários
+        
        return view('home', compact('sectories','type_projects','projects','tasks'));
     }
-
 
     public function store()
     {

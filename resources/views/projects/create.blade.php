@@ -11,6 +11,10 @@
     <div class="box-body">
         <form role="form" method="POST" action="/projects"  >
             @csrf
+
+            <div class="row">
+
+            
             <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect1">Categoria de Projeto</label>
                 <select id="typeProject" name="typeProject" class="form-control form-control-sm">
@@ -27,7 +31,9 @@
                     <option value="">Selecione uma opção</option>
                 </select>
             </div>
-            <!-- text input -->
+
+        </div>
+            <!-- nome da aula-->
             <div class="form-group">
                 <label>Nome da aula/curso:</label>
                 <input type="text" name="name" class="form-control" placeholder="Digite o nome" required>
