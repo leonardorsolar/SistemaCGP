@@ -1,5 +1,7 @@
 
-    
+<!-- home principal -->
+<!-- pagina principal home : include('pages.home') include('includes.tarefapp') --> 
+<!-- pagina principal home : include('pages.home') include('includes.tarefapp') -->  
     
     <!-- Main content -->
     
@@ -237,13 +239,8 @@
               </div>
             </div>
 
-
-          
-
 <!-- modal -->
 @include('includes.modal')
-
-
 
 
         <!--------------------------

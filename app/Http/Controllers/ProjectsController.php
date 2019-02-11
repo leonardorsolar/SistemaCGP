@@ -7,6 +7,7 @@ use App\Entities\TypeProject;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Task;
+use App\Entities\Sector;
 
 class ProjectsController extends Controller
 {
@@ -18,9 +19,12 @@ class ProjectsController extends Controller
 
     // recupero todos os projetos no banco
     $projects= Project::all();
+    //para listar
+    $type_projects = TypeProject::all();
+    $sectories = Sector::all();
 
     //
-    return view ('projects.index', compact('projects'));
+    return view ('projects.index', compact('projects','type_projects','sectories'));
 
     }
 
@@ -106,7 +110,7 @@ class ProjectsController extends Controller
         $total= $project->tasks;
         
 
-        return view ('projects.status', compact('project','tarefas','total'));
+        return view ('projects.status', compact('project','total_tarefas','total'));
         //return redirect($project->path()); 
 
     }

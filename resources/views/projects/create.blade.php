@@ -1,8 +1,9 @@
 @extends('adminlte::page')
 @section('title', 'SCGPCPT')
 @section('content')
-<div class="col-md-12">
+
 <div class="box">
+    
 <!-- general form elements  -->
     <div class="box-header with-border">
         <h3 class="box-title">Criando as Aulas/Cursos</h3>
@@ -12,6 +13,7 @@
         <form role="form" method="POST" action="/projects"  >
             @csrf
 
+            
             <div class="row">
 
             
@@ -52,7 +54,7 @@
         </form>
     </div>
 </div>
-</div>
+
 
 @endsection
 

@@ -20,6 +20,7 @@ Auth::routes();
 Route::group(['middleware'], function(){
     //Route::get('/admin', 'AdminController@index');
 
+    //listando os usuários do sistema
     Route::get('/users', 'UserController@index');
     //Route::get('/user/add', 'UserController@getAdd');
     //Route::post('/user/add', 'UserController@postAdd');
@@ -31,17 +32,30 @@ Route::group(['middleware'], function(){
 
 
 //home
+// pagina principal home : @include('pages.home')-> @include('includes.tarefapp')
+// pagina principal home : @include('pages.home')-> @include('includes.modal')
+//return view('home', compact('sectories','type_projects','projects','tasks'));
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-// lista os projetos
+// Monitoramento-listar projetos: lista os projetos(aulas ou cursos) do banco
+//controller: return view ('projects.index', compact('projects'));
 Route::get('/projects', 'ProjectsController@index');
+// cria os projetos(aulas ou cursos) no banco
+//controller: return view('projects.create', compact('type_projects'));
 Route::get('/projects/create', 'ProjectsController@create');
-// detalha um projeto id
+//Projeto ID com as tarefas ID:detalha um projeto id
+//controller: return view ('projects.show', compact('project'));
+//projects/show -> @include('includes.tarefa')
 Route::get('/projects/{project}', 'ProjectsController@show');
-Route::get('/projects/{project}/status', 'ProjectsController@status');
-// editar
+// editar nome do projeto
 Route::get('/projects/{project}/edit', 'ProjectsController@edit');
+// status do projeto id
+// Monitoramento-listar projetos -> status
+//return view ('projects.status', compact('project','tarefas','total'));
+Route::get('/projects/{project}/status', 'ProjectsController@status');
+
+
 // update
 Route::patch('/projects/{project}', 'ProjectsController@update');
 Route::post('/projects', 'ProjectsController@store');
@@ -74,6 +88,17 @@ Route::get('/areaprojects/{areaprojects}/projects', function($areaProject_id) {
 Route::get('/projects/create/areaprojects', 'AreaProjectsController@create');
 Route::post('/projects/create/areaprojects', 'AreaProjectsController@store');
 
+
+// manipulando arquivos
+//https://www.cloudways.com/blog/laravel-multiple-files-images-upload/
+Route::get('/multiuploads', 'UploadController@uploadForm');
+Route::post('/multiuploads', 'UploadController@uploadSubmit');
+
+//testes
+Route::get('/getdownload', 'DownloadController@getdownload');
+Route::get('/download/{filename}', 'DownloadController@download');
+Route::get('/delete/{filename}', 'DownloadController@delete');
+//Route::get( '/download/{filename}', 'DownloadController@downloadarquivo');
 
 
 Route::get('/okr', function () {

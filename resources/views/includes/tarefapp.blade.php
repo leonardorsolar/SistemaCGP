@@ -1,4 +1,13 @@
 
+@foreach ($projects as $item)
+                    
+{{ $item->name }}
+
+@endforeach
+
+
+<!-- tarefas da página principal -->
+<!-- pagina principal home : include('pages.home') include('includes.tarefapp') -->
 
 @foreach($tasks as $task)
 

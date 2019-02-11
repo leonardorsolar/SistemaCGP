@@ -142,6 +142,11 @@ return [
                             'text' => 'Tarefas do setor',
                             'url'  => 'admin/settings',
                             'icon' => 'file',
+                        ],
+                        [
+                            'text' => 'Tarefas dos setores',
+                            'url'  => 'home',
+                            'icon' => 'file',
                         ],                
                     ],
                 ],
@@ -293,6 +298,27 @@ return [
             'icon'        => 'clipboard',
         ],
         // Produtividade Mensal
+
+         // Manual de Padronização
+         [
+            'text'    => 'Manual',
+            'icon'    => 'book',
+            'submenu' => [
+                
+                [
+                    'text' => 'Upload',
+                    'url'  => 'multiuploads',
+                    'icon' => 'file',
+                ],
+                [
+                    'text' => 'Download',
+                    'url'  => 'getdownload',
+                    'icon' => 'file',
+                ],                     
+                
+            ],
+        ], // Manual de Padronização
+
         // Adminastração de Projetos
 
                 'Gestão',
@@ -332,50 +358,7 @@ return [
                         ],
                         // Ficha do colaborador  
 
-               // Manual de Padronização
-               [
-                'text'    => 'Manual',
-                'icon'    => 'book',
-                'submenu' => [
-                    [
-                        'text' => 'Cinegrafia',
-                        'url'  => 'admin/settings',
-                        'icon' => 'file',
-                    ],
-                    [
-                        'text' => 'Sonoplastia',
-                        'url'  => 'admin/settings',
-                        'icon' => 'file',
-                    ],
-                    [
-                        'text' => 'Computação gráfica',
-                        'url'  => 'admin/settings',
-                        'icon' => 'file',
-                    ],
-                    [
-                        'text' => 'Edição',
-                        'url'  => 'admin/settings',
-                        'icon' => 'file',
-                    ],  
-                    [
-                        'text' => 'Controle de qualidade',
-                        'url'  => 'admin/settings',
-                        'icon' => 'file',
-                    ],                     
-                    [
-                        'text' => 'Autoração',
-                        'url'  => 'admin/settings',
-                        'icon' => 'file',
-                    ],                     
-                    [
-                        'text' => 'Backup',
-                        'url'  => 'admin/settings',
-                        'icon' => 'file',
-                    ],                      
-                    
-
-                ],
-            ], // Manual de Padronização
+              
 
 
         'Admin',

@@ -1,6 +1,13 @@
-@foreach($projects as $project)
-<option value="{{$project->id}}">{{$project->name}}</option>
- @endforeach
+<!-- pagina principal home : include('pages.home')-> include('includes.tarefapp')-->
+<!-- pagina principal home : include('pages.home')-> include('includes.modal')-->
+
+@foreach ($projects as $project)
+
+        {{ $project->name }}
+        
+@endforeach
+
+
 
 
     <!-- Modal Adicionar tarefas-->
@@ -74,15 +81,7 @@
 
                         </div>
 
-                
-                <?php
-                
-                
-               // $valor = $_POST['projeto'];
-                
-                ?>
-                
-
+            
                     <div class="form-group">
 
 
@@ -108,7 +107,8 @@
 
                         <div class="row"> 
                                 <div class="col-md-3">
-                                              <!-- Date -->
+                                    
+                                    <!-- Date -->
                                     
                                      <label>Previsão de início:</label>
                                     
@@ -134,9 +134,9 @@
                                 <div class="col-md-3">
                                         <label for="projeto">Status</label>
                                         <select name="projeto" class="form-control form-control-sm" id="projeto">
+                                                <option value="">A iniciar</option>
                                                 <option value="">Progresso</option>
                                                 <option value="">Parado</option>
-                                                <option value="">Análise</option>
                                                 <option value="">Finalizado</option>
                                         </select>
 

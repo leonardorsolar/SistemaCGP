@@ -17,7 +17,9 @@
 @stop
 
 @section('content')
-    
+
+<!-- home principal -->
+<!-- pagina principal home : include('pages.home') include('includes.tarefapp') -->
 @include('pages.home')
     
 @stop

@@ -1,6 +1,8 @@
 <div class="todo-list">
     <h2>Tarefas</h2>
 
+   
+
    {{-- tasks --}}
    @foreach ($project->tasks as $task)
    <!-- tarefa -->
@@ -16,7 +18,7 @@
     <!-- todo text -->
     <span class="text-muted small lh-125 ">Segunda-feira 01/02</span>
     
-    <span class="text-muted small lh-125">Aula08 Vasectomia</span>
+    <span class="text-black">{{ $project->name }}</span>
     <span class="text-muted small lh-125"> Cirurgia de Grandes animais</span>
     <small class="label label-danger"></i> em análise</small>
     <div class="tools">
@@ -56,7 +58,7 @@
         <!-- todo text -->
         <span class="text-muted small lh-125 ">Segunda-feira 01/02</span>
         
-        <span class="text-muted small lh-125">Aula08 Vasectomia</span>
+        <span class="text-black">{{ $project->name }}</span>
         <span class="text-muted small lh-125"> Cirurgia de Grandes animais</span>
         <small class="label label-danger"></i> em análise</small>
         <div class="tools">
