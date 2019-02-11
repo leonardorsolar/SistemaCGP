@@ -13,7 +13,7 @@
     <li class="active">Here</li>
   </ol>
 
-  
+
 @stop
 
 @section('content')
@@ -23,4 +23,5 @@
 @include('pages.home')
     
 @stop
+
 

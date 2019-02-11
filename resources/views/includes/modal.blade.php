@@ -7,9 +7,6 @@
         
 @endforeach
 
-
-
-
     <!-- Modal Adicionar tarefas-->
     <div class="modal fade bd-example-modal-lg small lh-125" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
@@ -164,6 +161,8 @@
         </div>
     </div>
 </div>
+
+
 @section('js')
     <script> 
      $('#typeProject').on('change', function(e){

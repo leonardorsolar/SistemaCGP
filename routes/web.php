@@ -94,6 +94,11 @@ Route::post('/projects/create/areaprojects', 'AreaProjectsController@store');
 Route::get('/multiuploads', 'UploadController@uploadForm');
 Route::post('/multiuploads', 'UploadController@uploadSubmit');
 
+
+// calendario
+Route::get('/calendar01', 'CalendarController@index');
+
+
 //testes
 Route::get('/getdownload', 'DownloadController@getdownload');
 Route::get('/download/{filename}', 'DownloadController@download');

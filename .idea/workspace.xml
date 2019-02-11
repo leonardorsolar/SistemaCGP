@@ -207,7 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,6 +278,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,16 +331,17 @@
       <workItem from="1548887265888" duration="2344000" />
       <workItem from="1549165079149" duration="360000" />
       <workItem from="1549661020201" duration="7019000" />
+      <workItem from="1549896192834" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10671000" />
+    <option name="totallyTimeSpent" value="10678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30635402" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31089258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -452,13 +453,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/sector" />
-    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/sectors">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/sectors" />
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -501,13 +496,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/users" />
     <entry file="file://$PROJECT_DIR$/database/seeds/SectorTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -583,13 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/area_projects">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/area_projects" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AreaProjectsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -612,20 +595,8 @@
         <state relative-caret-position="-204" />
       </provider>
     </entry>
-    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/roles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/projects">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/roles" />
+    <entry file="das://92306599-eca2-450e-b18f-fcab5cd5e8ec/schema/laravel_sistemacgp/table/projects" />
     <entry file="file://$PROJECT_DIR$/database/seeds/ProjectTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">

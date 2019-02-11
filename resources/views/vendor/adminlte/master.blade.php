@@ -15,6 +15,11 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/Ionicons/css/ionicons.min.css') }}">
 
+<!-- arquivos para calendario -->
+    <link rel="stylesheet" href="<?php echo asset('css/fullcalendar.min.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo asset('css/fullcalendar.print.min.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo asset('css/_all-skins.min.css')?>" type="text/css">
+
     @if(config('adminlte.plugins.select2'))
         <!-- Select2 -->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css">
@@ -46,6 +51,19 @@
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
+<!-- arquivos para to do list -->
+<script type="text/javascript" src="<?php echo asset('js/dashboard.js')?>"></script>
+<script type="text/javascript" src="<?php echo asset('js/jquery-ui.min.js')?>"></script>
+
+<!-- arquivos para calendario -->
+<script type="text/javascript" src="<?php echo asset('js/demo.js')?>"></script>
+<script type="text/javascript" src="<?php echo asset('js/adminlte.min.js')?>"></script>
+<script type="text/javascript" src="<?php echo asset('js/fastclick.js')?>"></script>
+<script type="text/javascript" src="<?php echo asset('js/moment.js')?>"></script>
+<script type="text/javascript" src="<?php echo asset('js/fullcalendar.min.js')?>"></script>
+<script type="text/javascript" src="<?php echo asset('js/bootstrap.min.js')?>"></script>
+
+
 @if(config('adminlte.plugins.select2'))
     <!-- Select2 -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
@@ -62,6 +80,9 @@
 @endif
 
 @yield('adminlte_js')
+
+
+
 
 </body>
 </html>
